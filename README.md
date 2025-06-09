@@ -65,5 +65,5 @@ This project uses [uv](https://astral.sh/docs/uv) as the package and environment
 ## Contact
 
 Maria Perez — mary.perez.m@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/maria-perez1205) / [GitHub](https://github.com/pmmaria/pmmaria.github.io) / [GitHub Blog](pmmaria.github.io)
+[LinkedIn](https://www.linkedin.com/in/maria-perez1205) / [GitHub](https://github.com/pmmaria/pmmaria.github.io) / [Blog](pmmaria.github.io)
 
