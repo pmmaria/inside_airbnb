@@ -1,22 +1,49 @@
-# Inside Airbnb Analysis - Santiago
+# Inside Airbnb — Santiago Analysis
 
-This project analyzes Airbnb listings and calendar data for Santiago, Chile.  
-It includes data cleaning, exploratory analysis, and visualization using Jupyter notebooks.
+This project analyzes Airbnb listings data for Santiago using the public **Inside Airbnb** dataset. It explores price patterns, availability, and reviews to provide insights into the local short-term rental market.
 
-## Project structure
+---
 
-- `01_exploratory_analysis.ipynb`: Initial data exploration and cleaning  
-- `02_analysis_calendar.ipynb`: Calendar data analysis (in progress)  
-- `03_analysis_listings.ipynb`: Listings data analysis (in progress)  
-- `cleaned_data/`: Cleaned CSV files (not uploaded to GitHub)  
-- `figures/`: Saved histograms and plots  
-- `.venv/`: Python virtual environment (ignored)  
+## Tech Stack
 
-## Data
+- **Language**: Python 3.12
+- **Data Analysis**: pandas, seaborn, matplotlib
+- **Environment & Dependency Management**: 
+This project uses [uv](https://astral.sh/docs/uv) as the package and environment manager + `pyproject.toml`
+- **Notebook**: Jupyter via VSCode
+
+---
+
+## Project Structure
+
+```bash 
+inside_airbnb/
+├─ santiago/            # Raw datasets 
+├── notebooks/          # Jupyter notebooks for each dataset
+│   ├── 01_exploratory_analysis.ipynb
+│   ├── 02_analysis_calendar.ipynb
+│   ├── 03_analysis_listings.ipynb
+│   └── ...
+├── pyproject.toml      # Project metadata and dependencies
+├── README.md
+└── .venv/              # Virtual environment
+```
+
+---
+
+## Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/pmmaria/inside_airbnb.git
+cd inside_airbnb
+```
+### 2. Add the datasets
 
 This project uses datasets from [Inside Airbnb - Santiago](http://insideairbnb.com/get-the-data.html).
 
-### How to download data:
+#### How to download data:
 
 1. Go to the [Inside Airbnb Data page](http://insideairbnb.com/get-the-data.html).  
 2. Download the relevant files for Santiago.  
@@ -24,48 +51,53 @@ This project uses datasets from [Inside Airbnb - Santiago](http://insideairbnb.c
 
 The notebooks assume the data files are located in `./santiago/`.
 
-## Setup
+### 3. Create the virtual environment
 
-This project uses [uv](https://astral.sh/docs/uv) as the package and environment manager.
+```bash
+      uv sync
+  ```
+This reads from `pyproject.toml` and creates a `.venv/` folder with all required packages.
 
-### To get started:
 
-1. Clone the repository  
-2. Initialize and sync the environment (only needed the first time):
+### 4. Activate the environment:
 
-    ```bash
-    uv init       # Run once when starting the project
-    uv sync       # Install dependencies from pyproject.toml
-    ```
+  ```bash
+  source .venv/bin/activate   # On Linux/macOS
+  ```
+  
+  ```bash
+  .\.venv\Scripts\Activate.ps1 # For Windows PowerShell
+  ```
 
-3. Activate the environment:
+### 5. Install the Jupyter kernel (if needed)
+If running a notebook gives a kernel error, install it manually:
 
-    - If using `uv`, run:
-    
-      ```bash
-      uv shell
-      ```
+  ```bash
+  uv add ipykernel
+  ```
 
-    - Or if you manually created a virtual environment named `.venv`:
+### 6. Notebooks
 
-      ```bash
-      source .venv/bin/activate   # On Linux/macOS
-      ```
+Run the notebooks in order:
 
-      For Windows PowerShell:
+- `01_exploratory_analysis.ipynb`: initial structure, preview of all datasets.
 
-      ```powershell
-      .\.venv\Scripts\Activate.ps1
-      ```
+- `02_analysis_calendar.ipynb`: data cleaning and pricing trends (in progress).
 
-4. Run the notebooks in order starting with `01_exploratory_analysis.ipynb`.
+- `03_analysis_listings.ipynb`: listings structure, features, and clustering (planned).
 
----
+- `04_analysis_reviews.ipynb`: review patterns, sentiment, and activity (planned).
+
+
 
 ## Contact
 
-Maria Perez — mary.perez.m@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/maria-perez1205) / [GitHub](https://github.com/pmmaria) 
+Created by Maria Perez.
+
+Feel free to reach out via GitHub or LinkedIn!
+
+- mary.perez.m@gmail.com  
+- [LinkedIn](https://www.linkedin.com/in/maria-perez1205) / - [GitHub](https://github.com/pmmaria) 
 
 ## Learn More About Me
 
